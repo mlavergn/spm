@@ -28,3 +28,11 @@ This template includes 2 plugin templates:
   - Adds a command to `swift package` that runs an external procress. (eg. xcodebuild)
 - DemoBuildToolPlugin.
   - Preprocesses the source directory with sed to lowercase the string "OK".
+
+## External Links
+
+- https://github.com/apple/swift-package-manager/blob/main/Documentation/Plugins.md
+- https://www.wwdcnotes.com/notes/wwdc22/110359/
+- https://augmentedcode.io/2022/11/28/setting-up-a-build-tool-plugin-for-a-swift-package/
+- https://theswiftdev.com/beginners-guide-to-swift-package-manager-command-plugins/
+- https://www.swiftcraft.io/articles/actions-with-spm-plugins
