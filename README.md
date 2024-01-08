@@ -29,6 +29,10 @@ This template includes 2 plugin templates:
 - DemoBuildToolPlugin.
   - Preprocesses the source directory with sed to lowercase the string "OK".
 
+## Using Swift Packages from Xcode
+
+- https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app
+
 ## External Links
 
 - https://github.com/apple/swift-package-manager/blob/main/Documentation/Plugins.md
