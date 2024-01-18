@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Command Plugin Test
+    - name: Test
       run: cd app; swift test -v
-    - name: Build Tool Plugin Test
+    - name: Build
       run: cd app; swift build -v
