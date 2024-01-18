@@ -3,36 +3,34 @@
 
 import PackageDescription
 
-var linkerSettings: [LinkerSetting] = [
-    .linkedFramework("Foundation", nil),
-]
-
 let package = Package(
     name: "Demo",
     platforms: [.iOS("17.0"), .macOS("14.0"), .watchOS("10.0")],
     products: [
-        .library(name: "DemoFmwk", targets: ["DemoFmwk"]),
-        .executable(name: "Demo", targets: ["Demo"])
+        .library(name: "DemoFramework", type: .dynamic, targets: ["DemoFramework"]),
+        .executable(name: "DemoApp", targets: ["DemoApp"])
     ],
     targets: [
         .target(
-            name: "DemoFmwk",
+            name: "DemoFramework",
             dependencies: [],
             path: "Sources/Fmwk",
             exclude: ["Info.plist"],
             resources: [ .copy("Info.plist") ],
-            linkerSettings: linkerSettings
+            linkerSettings: [
+                .linkedFramework("Foundation", nil),
+            ]
         ),
         .executableTarget(
-            name: "Demo",
-            dependencies: [],
+            name: "DemoApp",
+            dependencies: ["DemoFramework"],
             path: "Sources/App",
             exclude: ["Info.plist"],
             resources: [ .copy("Info.plist") ]
         ),
         .testTarget(
             name: "DemoTests",
-            dependencies: ["Demo"],
+            dependencies: ["DemoFramework"],
             path: "Tests"
         )
     ]

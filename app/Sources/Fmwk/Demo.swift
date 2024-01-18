@@ -1,7 +1,7 @@
 import Foundation
 
 public struct Demo {
-    public static func demo() {
-        print("OK FMWK")xx
+    public static func demo() -> String {
+        return "OK FMWK"
     }
 }

@@ -1,9 +1,10 @@
-import Demo
+import DemoFmwk
 
-@main
-struct Main {
+struct App {
     static func main() {
         print("OK APP")
-        Demo.demo()
+        print(Demo.demo())
     }
 }
+
+App.main()
