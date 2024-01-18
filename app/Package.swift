@@ -18,7 +18,7 @@ let package = Package(
             exclude: ["Info.plist"],
             resources: [ .copy("Info.plist") ],
             linkerSettings: [
-                .linkedFramework("Foundation", nil),
+                .linkedFramework("Foundation")
             ]
         ),
         .executableTarget(
@@ -31,7 +31,10 @@ let package = Package(
         .testTarget(
             name: "DemoTests",
             dependencies: ["DemoFramework"],
-            path: "Tests"
+            path: "Tests",
+            linkerSettings: [
+                .linkedFramework("Foundation")
+            ]
         )
     ]
 )
