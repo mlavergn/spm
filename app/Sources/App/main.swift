@@ -1,4 +1,4 @@
-import DemoFmwk
+import DemoFramework
 
 struct App {
     static func main() {

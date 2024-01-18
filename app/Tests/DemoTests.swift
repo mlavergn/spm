@@ -1,5 +1,5 @@
 import XCTest
-@testable import DemoFmwk
+@testable import DemoFramework
 
 class DemoTests: XCTestCase {
 
