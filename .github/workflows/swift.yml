@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Command Plugin Test
-      run: swift package demo iphoneos -v --disable-sandbox
+      run: swift test -v
     - name: Build Tool Plugin Test
       run: swift build -v
