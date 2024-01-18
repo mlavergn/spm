@@ -1,11 +1,15 @@
 // swift-tools-version: 5.7
 // Minimum Swift version required
 
+// Note:
+// swift-tools-version and platforms.macOS are version adjusted to
+// work with GitHub actions as of 01/2024.
+
 import PackageDescription
 
 let package = Package(
     name: "Demo",
-    platforms: [.iOS("17.0"), .macOS("14.0"), .watchOS("10.0")],
+    platforms: [.iOS("17.0"), .macOS("13.1"), .watchOS("10.0")],
     products: [
         .library(name: "DemoFramework", type: .dynamic, targets: ["DemoFramework"]),
         .executable(name: "DemoApp", targets: ["DemoApp"])
