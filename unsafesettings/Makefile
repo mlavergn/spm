@@ -6,12 +6,12 @@
 
 .DEFAULT_GOAL := build
 
-SDK ?= iphoneos
+SDK ?= macosx
 SDK_PATH := $(shell xcrun --sdk ${SDK} --show-sdk-path)
 
 ifeq ($(SDK),iphoneos)
-SDK_TRIPLE := arm64-apple-ios17.2
-else ifeq ($(SDK),tvos)
+SDK_TRIPLE := arm64e-apple-ios
+else ifeq ($(SDK),appletvos)
 SDK_TRIPLE := arm64-apple-tvos
 else ifeq ($(SDK),watchos)
 SDK_TRIPLE := arm64_32-apple-watchos

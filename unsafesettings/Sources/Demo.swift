@@ -1,8 +1,7 @@
 import Foundation
 
-@main
-struct Demo {
-    static func main() {
+public struct Demo {
+    public static func demo() {
         print("OK")
     }
 }
