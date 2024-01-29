@@ -12,10 +12,14 @@ open:
 clean:
 	swift package clean
 	swift package purge-cache
+	swift package reset
 	rm -r .build
 
 build:
 	swift build
+
+ios:
+	swift build --sdk `xcrun --sdk iphoneos --show-sdk-path` --triple arm64e-apple-ios
 
 run:
 	swift run

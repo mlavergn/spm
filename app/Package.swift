@@ -11,7 +11,7 @@ let package = Package(
     name: "Demo",
     platforms: [.iOS("17.0"), .macOS("13.1"), .watchOS("10.0")],
     products: [
-        .library(name: "DemoFramework", type: .dynamic, targets: ["DemoFramework"]),
+        .library(name: "DemoFramework", targets: ["DemoFramework"]),
         .executable(name: "DemoApp", targets: ["DemoApp"])
     ],
     targets: [
